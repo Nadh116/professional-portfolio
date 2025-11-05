@@ -1,0 +1,40 @@
+HOW TO ADD YOUR PROFILE IMAGE
+==============================
+
+IMPORTANT: Your portfolio is looking for a file called "profile.jpg" in the public folder.
+
+STEPS:
+------
+
+1. Save your profile photo from the image you shared with me
+
+2. Rename it to: profile.jpg
+
+3. Copy it to this location:
+   C:\Users\hp\my-first-app\professional-portfolio\public\profile.jpg
+
+4. The portfolio will automatically show your image!
+
+ALTERNATIVE METHOD (if the file is already saved somewhere):
+------------------------------------------------------------
+
+Option A - Using File Explorer:
+1. Open File Explorer
+2. Navigate to: C:\Users\hp\my-first-app\professional-portfolio\public
+3. Copy your profile image there
+4. Rename it to: profile.jpg
+
+Option B - Using PowerShell:
+1. Open PowerShell in the portfolio directory
+2. Run: Copy-Item "path\to\your\image.jpg" "public\profile.jpg"
+
+TIPS:
+-----
+- The image should be square (same width and height)
+- Recommended size: at least 500x500 pixels
+- File format: JPG or JPEG
+- File name must be exactly: profile.jpg (lowercase)
+
+Once added, refresh your browser to see your profile photo!
+
+Current dev server: http://localhost:5174
