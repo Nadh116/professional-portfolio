@@ -110,9 +110,9 @@ const About = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { number: '10+', label: 'Projects Completed' },
+            { number: '12+', label: 'Projects Completed' },
             { number: '5+', label: 'Years Experience' },
-            { number: '4', label: 'Major Systems Built' },
+            { number: '9', label: 'Major Systems Built' },
             { number: '100%', label: 'Code Quality' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
