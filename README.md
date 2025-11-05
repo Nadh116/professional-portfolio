@@ -15,11 +15,19 @@ A modern, responsive portfolio website showcasing my full-stack development proj
 
 ## 🛠️ Tech Stack
 
+### Portfolio Built With:
 - **React** - UI library
 - **Vite** - Build tool and dev server
 - **Tailwind CSS** - Utility-first CSS framework
 - **Framer Motion** - Animation library
 - **Lucide React** - Beautiful icon set
+
+### My Core Technologies:
+- **Node.js** - Backend runtime environment
+- **React** - Frontend library
+- **Express** - Web application framework
+- **MongoDB** - NoSQL database
+- **MySQL** - Relational database
 
 ## 🚀 Getting Started
 

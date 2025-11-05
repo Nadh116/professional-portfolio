@@ -41,6 +41,7 @@ const About = () => {
         >
           <h2 className="section-title">About Me</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Specializing in <span className="font-semibold text-primary-600 dark:text-primary-400">Node.js, React, Express & MongoDB</span> - 
             A passionate developer dedicated to crafting exceptional digital experiences
           </p>
         </motion.div>

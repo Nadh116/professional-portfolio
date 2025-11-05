@@ -55,11 +55,28 @@ const Hero = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6"
           >
             Building modern web applications with Node.js, React, and MySQL. 
             Passionate about solving real-world problems through code and creating impactful software solutions.
           </motion.p>
+
+          {/* Tech Stack Badges */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="flex flex-wrap justify-center gap-3 mb-8"
+          >
+            {['Node.js', 'React', 'Express', 'MongoDB', 'MySQL'].map((tech, index) => (
+              <span
+                key={index}
+                className="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full font-semibold text-sm border border-primary-200 dark:border-primary-800"
+              >
+                {tech}
+              </span>
+            ))}
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
