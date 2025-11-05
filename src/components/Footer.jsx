@@ -74,6 +74,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="tel:+251924018643" className="hover:text-primary-400 transition-colors">
+                  +251 924 018 643
+                </a>
+              </li>
+              <li>
                 <a href="https://github.com/nadh116" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors">
                   github.com/nadh116
                 </a>

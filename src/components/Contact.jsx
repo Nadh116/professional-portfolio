@@ -24,8 +24,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      value: 'Available on request',
-      link: null,
+      value: '+251 924 018 643',
+      link: 'tel:+251924018643',
     },
     {
       icon: MapPin,
