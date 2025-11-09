@@ -34,18 +34,18 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 relative">
           {/* Logo */}
           <motion.a
             href="#home"
             className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
-            Portfolio
+            Nedhi Jemal
           </motion.a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item) => (
               <motion.a
                 key={item.name}
@@ -56,6 +56,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 {item.name}
               </motion.a>
             ))}
+          </div>
+
+          {/* Dark Mode Toggle - Right Side */}
+          <div className="hidden md:flex items-center">
             <button
               onClick={toggleDarkMode}
               className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"

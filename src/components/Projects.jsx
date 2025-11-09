@@ -13,7 +13,7 @@ const Projects = () => {
       description: 'Comprehensive system allowing teachers to input and manage student marks per subject. Generates detailed reports including total, average, rank, and status with role-based access control.',
       image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop',
       tags: ['React', 'Node.js', 'MySQL', 'Express'],
-      github: 'https://github.com/nadh116/student-record-system',
+      github: 'https://github.com/Nadh116/Student-record-manegemt-system',
       demo: '#',
     },
     {
@@ -21,7 +21,7 @@ const Projects = () => {
       description: 'Comprehensive event management platform built with PHP. Features event creation, participant registration, scheduling, and real-time notifications. Admin dashboard for managing events and attendees.',
       image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop',
       tags: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap'],
-      github: 'https://github.com/nadh116/event-management-system-php',
+      github: 'https://github.com/yohanis-Tasfa/event-management-system-php',
       demo: '#',
     },
     {
@@ -29,7 +29,7 @@ const Projects = () => {
       description: 'Modern hotel booking platform with user registration, room listings, booking system, and dynamic contact forms. Clean UI for seamless user experience.',
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop',
       tags: ['React', 'Node.js', 'Express', 'MongoDB'],
-      github: 'https://github.com/nadh116/skylight-hotel',
+      github: 'https://github.com/Nadh116/Ethiopian_sklyight_Hotal_Website',
       demo: '#',
     },
     {
@@ -61,7 +61,7 @@ const Projects = () => {
       description: 'Streamlined event registration system allowing users to browse events, register online, and receive confirmations. Features payment integration and automated email notifications.',
       image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop',
       tags: ['Node.js', 'React', 'MongoDB', 'Express'],
-      github: 'https://github.com/nadh116/event-registration-management',
+      github: 'https://github.com/Nadh116/Event-regesrteration_managemant-system',
       demo: '#',
     },
     {
@@ -77,8 +77,24 @@ const Projects = () => {
       description: 'Mobile-friendly university management application for Ethiopian universities. Features student portal, course registration, grade viewing, and campus news. Streamlines academic administration.',
       image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop',
       tags: ['React', 'Node.js', 'MySQL', 'Express'],
-      github: 'https://github.com/nadh116/ethio-university-app',
+      github: 'https://github.com/Nadh116/Ethio-universtiy-app',
       demo: '#',
+    },
+  ]
+
+  // Quick access repository links frequently requested during demos
+  const featuredRepositories = [
+    {
+      label: 'Event Registration Management System',
+      href: 'https://github.com/Nadh116/Event-regesrteration_managemant-system',
+    },
+    {
+      label: 'Event Management System (PHP)',
+      href: 'https://github.com/yohanis-Tasfa/event-management-system-php',
+    },
+    {
+      label: 'Ethiopian Skylight Hotel Website',
+      href: 'https://github.com/Nadh116/Ethiopian_sklyight_Hotal_Website',
     },
   ]
 
@@ -158,6 +174,31 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Direct repository links for quick access */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-12"
+        >
+          <h3 className="text-xl font-semibold text-center mb-4 text-gray-900 dark:text-white">
+            Direct Repository Links
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {featuredRepositories.map((repo, index) => (
+              <a
+                key={index}
+                href={repo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full border border-primary-200 dark:border-primary-800 text-primary-600 dark:text-primary-400 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors"
+              >
+                {repo.label}
+              </a>
+            ))}
+          </div>
+        </motion.div>
 
         {/* View More Button */}
         <motion.div

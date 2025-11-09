@@ -25,7 +25,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="mb-8 inline-block"
           >
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary-500 to-purple-600 p-1 shadow-2xl">
+            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-primary-500 to-purple-600 p-1 shadow-2xl">
               <img 
                 src="/profile.jpg" 
                 alt="Nadhii Jemal" 
@@ -55,11 +55,33 @@ const Hero = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-4"
           >
+            4th Year Software Engineering Student from Haramaya University with 3 years of hands-on development experience.
             Building modern web applications with Node.js, React, and MySQL. 
             Passionate about solving real-world problems through code and creating impactful software solutions.
           </motion.p>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.45, duration: 0.5 }}
+            className="flex flex-wrap justify-center gap-6 mb-6 text-sm md:text-base"
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🎓</span>
+              <span className="text-gray-700 dark:text-gray-300 font-semibold">4th Year Software Engineering Student</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">💼</span>
+              <span className="text-gray-700 dark:text-gray-300 font-semibold">3 Years Experience</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">⚡</span>
+              <span className="text-gray-700 dark:text-gray-300 font-semibold">80% Code Quality</span>
+            </div>
+          </motion.div>
 
           {/* Tech Stack Badges */}
           <motion.div
@@ -68,7 +90,7 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.5 }}
             className="flex flex-wrap justify-center gap-3 mb-8"
           >
-            {['Node.js', 'React', 'Express', 'MongoDB', 'MySQL'].map((tech, index) => (
+            {['Node.js', 'React', 'Express', 'MongoDB', 'MySQL', 'Tailwind CSS', 'JWT', 'Sequelize', 'Mongoose', 'Git', 'REST APIs'].map((tech, index) => (
               <span
                 key={index}
                 className="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full font-semibold text-sm border border-primary-200 dark:border-primary-800"
@@ -125,7 +147,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 right-8"
       >
         <motion.a
           href="#about"

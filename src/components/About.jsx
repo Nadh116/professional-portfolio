@@ -111,9 +111,9 @@ const About = () => {
         >
           {[
             { number: '12+', label: 'Projects Completed' },
-            { number: '5+', label: 'Years Experience' },
+            { number: '3+', label: 'Years Experience' },
             { number: '9', label: 'Major Systems Built' },
-            { number: '100%', label: 'Code Quality' },
+            { number: '80%', label: 'Code Quality' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-2">
