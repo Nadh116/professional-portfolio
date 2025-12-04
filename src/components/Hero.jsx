@@ -42,7 +42,7 @@ const Hero = () => {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-4">
               <span className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                Nadhii Jemal
+                Nedhi Jemal
               </span>
             </h1>
             <p className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-6">
@@ -111,7 +111,7 @@ const Hero = () => {
               <Mail size={20} />
               Get In Touch
             </a>
-            <a href="/resume.pdf" download className="btn-secondary inline-flex items-center justify-center gap-2">
+            <a href="/Nadhii-Jemal-CV-Resume.pdf" download className="btn-secondary inline-flex items-center justify-center gap-2">
               <Download size={20} />
               Download Resume
             </a>

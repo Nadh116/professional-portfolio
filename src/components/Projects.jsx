@@ -9,6 +9,14 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Murti Guuto Students Association Platform',
+      description: 'Full-stack portal supporting MGSA students with resource sharing, profile management, multimedia gallery, and admin tools for user and content moderation.',
+      image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+      github: 'https://github.com/Rammiso/Murti-Guutoo-Student-Association',
+      demo: '#',
+    },
+    {
       title: 'Student Record Management System',
       description: 'Comprehensive system allowing teachers to input and manage student marks per subject. Generates detailed reports including total, average, rank, and status with role-based access control.',
       image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop',
@@ -41,11 +49,11 @@ const Projects = () => {
       demo: '#',
     },
     {
-      title: 'Hospital Management System',
-      description: 'Full-featured HMS with patient records, appointment scheduling, clinical operations, and inventory management. Built for efficient healthcare delivery.',
-      image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop',
-      tags: ['React', 'Node.js', 'MySQL', 'Sequelize'],
-      github: 'https://github.com/nadh116/hms-backend',
+      title: 'Health Center Management System',
+      description: 'Clinic-focused platform streamlining patient registration, appointment scheduling, medical records, and inventory oversight with dedicated admin tools.',
+      image: 'https://images.unsplash.com/photo-1580281657521-0ef3c08cd9ac?w=800&h=600&fit=crop',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+      github: 'https://github.com/yihune1234/Health-Center-Management-System',
       demo: '#',
     },
     {
@@ -84,6 +92,10 @@ const Projects = () => {
 
   // Quick access repository links frequently requested during demos
   const featuredRepositories = [
+    {
+      label: 'Murti Guuto Students Association Platform',
+      href: 'https://github.com/Rammiso/Murti-Guutoo-Student-Association',
+    },
     {
       label: 'Event Registration Management System',
       href: 'https://github.com/Nadh116/Event-regesrteration_managemant-system',
