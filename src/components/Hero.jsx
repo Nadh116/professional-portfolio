@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react'
+import AnimatedName from './AnimatedName'
+import AnimatedRoles from './AnimatedRoles'
 
 const Hero = () => {
   const socialLinks = [
@@ -26,9 +28,9 @@ const Hero = () => {
             className="mb-8 inline-block"
           >
             <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-primary-500 to-purple-600 p-1 shadow-2xl">
-              <img 
-                src="/profile.jpg" 
-                alt="Nadhii Jemal" 
+              <img
+                src="/profile.jpg"
+                alt="Nadhii Jemal"
                 className="w-full h-full rounded-full object-cover"
               />
             </div>
@@ -39,15 +41,12 @@ const Hero = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
+            className="mb-4"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                Nedhi Jemal
-              </span>
-            </h1>
-            <p className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-6">
-              Full Stack Developer
-            </p>
+            <AnimatedName />
+            <div className="mt-6">
+              <AnimatedRoles />
+            </div>
           </motion.div>
 
           {/* Description */}
@@ -58,7 +57,7 @@ const Hero = () => {
             className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-4"
           >
             4th Year Software Engineering Student from Haramaya University with 3 years of hands-on development experience.
-            Building modern web applications with Node.js, React, and MySQL. 
+            Building modern web applications with Node.js, React, and MySQL.
             Passionate about solving real-world problems through code and creating impactful software solutions.
           </motion.p>
 
