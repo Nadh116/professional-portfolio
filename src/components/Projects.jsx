@@ -9,6 +9,14 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Haramaya University Red Cross Club Management System',
+      description: 'Comprehensive management system for university Red Cross club activities. Features member registration, event management, volunteer coordination, blood donation tracking, and administrative dashboard for club operations.',
+      image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&h=600&fit=crop',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+      github: 'https://github.com/Nadh116/Haramaya-University-Red-Cross-Club-Management-System',
+      demo: '#',
+    },
+    {
       title: 'Murti Guuto Students Association Platform',
       description: 'Full-stack portal supporting MGSA students with resource sharing, profile management, multimedia gallery, and admin tools for user and content moderation.',
       image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop',
@@ -92,6 +100,10 @@ const Projects = () => {
 
   // Quick access repository links frequently requested during demos
   const featuredRepositories = [
+    {
+      label: 'Haramaya University Red Cross Club Management System',
+      href: 'https://github.com/Nadh116/Haramaya-University-Red-Cross-Club-Management-System',
+    },
     {
       label: 'Murti Guuto Students Association Platform',
       href: 'https://github.com/Rammiso/Murti-Guutoo-Student-Association',
