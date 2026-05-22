@@ -1,13 +1,26 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { ExternalLink, Github } from 'lucide-react'
+import { ExternalLink, Github, Shield } from 'lucide-react'
 
 const Projects = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   const projects = [
+    {
+      title: 'Cyber Security Risk Analysis & Reporting System (CSRARS)',
+      subtitle: 'INSA — Security Assessment & Analysis',
+      description:
+        'Enterprise-grade cybersecurity platform for identifying security gaps, evaluating organizational risks, and generating professional security assessment reports. Features secure authentication (Google/GitHub OAuth, MFA), risk dashboard, assessment workflows, risk register, compliance modules, and real-time notifications.',
+      image: '/projects/csrars-dashboard.png',
+      images: ['/projects/csrars-dashboard.png', '/projects/csrars-login.png'],
+      tags: ['React.js', 'Node.js', 'Cybersecurity', 'Risk Analysis', 'MFA', 'OAuth'],
+      featured: true,
+      isCurrent: true,
+      github: 'https://github.com/Nedhi5376/INSA-CSRAARS',
+      demo: '#',
+    },
     {
       title: 'Haramaya University Red Cross Club Management System',
       description: 'Comprehensive management system for university Red Cross club activities. Features member registration, event management, volunteer coordination, blood donation tracking, and administrative dashboard for club operations.',
@@ -101,6 +114,10 @@ const Projects = () => {
   // Quick access repository links frequently requested during demos
   const featuredRepositories = [
     {
+      label: 'CSRARS — Cyber Security Risk Analysis System',
+      href: 'https://github.com/Nedhi5376/INSA-CSRAARS',
+    },
+    {
       label: 'Haramaya University Red Cross Club Management System',
       href: 'https://github.com/Nadh116/Haramaya-University-Red-Cross-Club-Management-System',
     },
@@ -140,61 +157,126 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="card group overflow-hidden"
+              className={`card group overflow-hidden ${
+                project.featured ? 'md:col-span-2 lg:col-span-3' : ''
+              }`}
             >
-              {/* Project Image */}
-              <div className="relative overflow-hidden rounded-lg mb-4 h-48">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 gap-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-white rounded-full hover:bg-primary-600 hover:text-white transition-colors"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <Github size={20} />
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-white rounded-full hover:bg-primary-600 hover:text-white transition-colors"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <ExternalLink size={20} />
-                  </a>
+              {/* Project images */}
+              {project.featured && project.images ? (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                  {project.images.map((img, imgIndex) => (
+                    <div
+                      key={imgIndex}
+                      className={`relative overflow-hidden rounded-lg border border-slate-200/80 dark:border-white/10 bg-slate-100 dark:bg-slate-800/50 ${
+                        imgIndex === 0 ? 'sm:h-56 lg:h-64' : 'sm:h-56 lg:h-64'
+                      }`}
+                    >
+                      <img
+                        src={img}
+                        alt={`${project.title} — ${imgIndex === 0 ? 'Dashboard' : 'Login'}`}
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <span className="absolute top-3 left-3 px-2.5 py-1 text-xs font-semibold rounded-md bg-black/60 text-white backdrop-blur-sm">
+                        {imgIndex === 0 ? 'Risk Dashboard' : 'Secure Login'}
+                      </span>
+                    </div>
+                  ))}
                 </div>
+              ) : (
+                <div className="relative overflow-hidden rounded-lg mb-4 h-48">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 gap-4">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-white rounded-full hover:bg-primary-600 hover:text-white transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                        aria-label="View on GitHub"
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
+                    {project.demo && project.demo !== '#' && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-white rounded-full hover:bg-primary-600 hover:text-white transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                        aria-label="Live demo"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Project info */}
+              <div className="flex flex-wrap items-start gap-2 mb-2">
+                <h3
+                  className={`font-bold text-gray-900 dark:text-white ${
+                    project.featured ? 'text-xl sm:text-2xl flex-1' : 'text-xl'
+                  }`}
+                >
+                  {project.title}
+                </h3>
+                {project.isCurrent && (
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-bold uppercase tracking-wide rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">
+                    <Shield className="h-3 w-3" />
+                    Current Project
+                  </span>
+                )}
               </div>
 
-              {/* Project Info */}
-              <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+              {project.subtitle && (
+                <p className="text-sm font-medium text-primary-600 dark:text-primary-400 mb-2">
+                  {project.subtitle}
+                </p>
+              )}
+
+              <p
+                className={`text-gray-600 dark:text-gray-400 mb-4 ${
+                  project.featured ? '' : 'line-clamp-3'
+                }`}
+              >
                 {project.description}
               </p>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag, tagIndex) => (
+                {project.tags.map((tag) => (
                   <span
-                    key={tagIndex}
+                    key={tag}
                     className="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
+
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-5 px-4 py-2.5 text-sm font-semibold rounded-lg border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 text-slate-700 dark:text-slate-200 hover:bg-primary-600 hover:text-white hover:border-primary-600 dark:hover:bg-primary-600 transition-colors duration-300"
+                >
+                  <Github size={18} />
+                  View on GitHub
+                </a>
+              )}
             </motion.div>
           ))}
         </div>

@@ -96,6 +96,30 @@ html {
   }
 }
 
+.hero-gradient-bg {
+  background-size: 200% 200%;
+  animation: gradientShift 18s ease infinite;
+}
+
+.hero-profile-glow {
+  background: radial-gradient(
+    circle,
+    rgba(14, 165, 233, 0.45) 0%,
+    rgba(20, 184, 166, 0.25) 40%,
+    transparent 70%
+  );
+  filter: blur(24px);
+}
+
+.dark .hero-profile-glow {
+  background: radial-gradient(
+    circle,
+    rgba(14, 165, 233, 0.55) 0%,
+    rgba(16, 185, 129, 0.3) 45%,
+    transparent 72%
+  );
+}
+
 /* Glow pulse animation */
 @keyframes glowPulse {
 
